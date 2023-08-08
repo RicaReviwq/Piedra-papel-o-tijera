@@ -36,25 +36,28 @@ else{
 
 
 
-const PLAYER_SELECTION = "piedra";
+
 const COMPUTER_SELECTION = getComputerChoice();
+let playerSelection = prompt("Piedra, Papel or Tijeras?", "");
+    playerSelection = playerSelection.toLowerCase();
 
-function playRound( PLAYER_SELECTION, COMPUTER_SELECTION ){
+function playRound( playerSelection, COMPUTER_SELECTION ){
+  
 
-    console.log("El jugador escogio: "+PLAYER_SELECTION);
+    console.log("El jugador escogio: "+playerSelection);
     console.log("Y la maquina escogio: "+COMPUTER_SELECTION);
 function game(){
 
-    if( PLAYER_SELECTION == "piedra" && COMPUTER_SELECTION == "tijera" ){
+    if( playerSelection == "piedra" && COMPUTER_SELECTION == "tijera" ){
         console.log("¡Tu ganas! La piedra vence a la tijera");
     }
-    else if( PLAYER_SELECTION == "papel" && COMPUTER_SELECTION == "piedra"){
+    else if( playerSelection == "papel" && COMPUTER_SELECTION == "piedra"){
         console.log("¡Tu ganas! El papel vence a la piedra");
     }
-    else if( PLAYER_SELECTION == "tijera" && COMPUTER_SELECTION == "papel"){
+    else if( playerSelection == "tijera" && COMPUTER_SELECTION == "papel"){
         console.log("¡Tu ganas! La tijera vence a la piedra");
     }
-    else if( PLAYER_SELECTION == COMPUTER_SELECTION){ 
+    else if( playerSelection == COMPUTER_SELECTION){ 
         console.log("¡Es un empate!");
     }
     else{
@@ -68,5 +71,5 @@ return game();
 
 }
 
-playRound( PLAYER_SELECTION, COMPUTER_SELECTION ) ;
 
+playRound( playerSelection, COMPUTER_SELECTION );
