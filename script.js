@@ -17,7 +17,6 @@ ELSE gana la maquina
 
 
 function getComputerChoice(){
-
 let numero_ale = Math.floor( Math.random() * 3);
 
 if( numero_ale == 0){
@@ -32,8 +31,25 @@ else if( numero_ale == 2){
 else{
     console.log("valor indefindio");
 }
+}
+
+
+
+
+const PLAYER_SELECTION = "piedra";
+const COMPUTER_SELECTION = getComputerChoice();
+
+function playRound( PLAYER_SELECTION, COMPUTER_SELECTION ){
+
+console.log("El jugador escogio: "+PLAYER_SELECTION);
+console.log("Y la maquina escogio: "+COMPUTER_SELECTION);
+
+if( PLAYER_SELECTION == "piedra" && COMPUTER_SELECTION == "papel" ){
+    console.log("¡Tu ganas! La piedra vence al papel");
+}
 
 }
 
-console.log( getComputerChoice() );
+
+console.log( playRound( PLAYER_SELECTION, COMPUTER_SELECTION ) );
 
