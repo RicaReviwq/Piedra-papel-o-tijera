@@ -13,51 +13,27 @@ ELSE gana la maquina
 ELSE gana la maquina
 
 */
-function Rondas( jugador_seleccion, seleccion_comp_ale ) {
-    // your code here!
-    console.log("El juego tendra 5 rondas");
-function juego(){
 
-    for( let i=1; i<6; i++){
-        console.log(  "La ronda " + i + " el ganador fue:"  );
-        seleccion_compu();
-    }
+
+
+function getComputerChoice(){
+
+let numero_ale = Math.floor( Math.random() * 3);
+
+if( numero_ale == 0){
+    return "piedra";
+}
+else if( numero_ale == 1){
+    return "papel";
+}
+else if( numero_ale == 2){
+    return "tijera";
+}
+else{
+    console.log("valor indefindio");
+}
 
 }
 
-juego();
-
-
-}
-
-
-let seleccion_comp_ale; 
-const jugador_seleccion = "tijera";
-Rondas( jugador_seleccion, seleccion_comp_ale);
-
-
-
-
-//Funcion que regresa piedra, papel o tijera aleatoriamente
-function seleccion_compu(){
-
-let num_aleatorio = Math.floor( Math.random() *3);
-
-switch (num_aleatorio){
-
-case 0:
-    seleccion_comp_ale = "tjera";
-    break;
-
-    case 1:
-        seleccion_comp_ale = "piedra";
-        break;
-
-        case 2:
-            seleccion_comp_ale = "papel";
-            break;
-
-}
-console.log(seleccion_comp_ale);
-}
+console.log( getComputerChoice() );
 
